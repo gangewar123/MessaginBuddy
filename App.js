@@ -27,19 +27,18 @@ import ChatScreen from "./component/ChatScreen"
 
 const HomeStack = createStackNavigator({
   Home: { screen: HomeScreen },
-  PersonalMessage: { screen: PersonalMessage }
 });
 
 const ChatStack = createStackNavigator({
   Chat: { screen: ChatScreen },
 
 });
-// const PersonalMessageStack = createStackNavigator({
-//   PersonalMessage: {
-//     screen: PersonalMessage,
-//   }
+const PersonalMessageStack = createStackNavigator({
+  PersonalMessage: {
+    screen: PersonalMessage,
+  }
 
-// });
+});
 
 
 
@@ -74,9 +73,9 @@ const tabbar = createBottomTabNavigator({
 const applictionlayer = createStackNavigator(
   {
     Tabs: tabbar,
-    // PersonalMessage: {
-    //   screen: PersonalMessageStack
-    // }
+    PersonalMessage: {
+      screen: PersonalMessageStack
+    }
   },
   {
     headerMode: "none"

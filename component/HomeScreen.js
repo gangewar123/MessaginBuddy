@@ -28,12 +28,9 @@ export default class HomeScreen extends Component {
                     <View style={{ margin: 10, borderRadius: 15, }}>
                         <View style={styles.container} key={item}>
                             <Text style={{ marginLeft: 5 }}>{item}</Text>
-                            <Text> ></Text>
-
+                            <Text> > </Text>
                         </View>
-
                     </View>
-
                 </Card>
             </TouchableOpacity>
         })

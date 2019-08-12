@@ -24,11 +24,12 @@ export default class ChatScreen extends Component {
   renderItem() {
     console.log(this.state.message)
 
-    return this.state.messages.map((message) => {
-      return <TouchableOpacity onPress={() => this.props.navigation.navigate("PersonalMessage", { name: message.name,response:message.response })}>
+    return this.state.messages.map((message, index) => {
+      console.log("kiran data index", index);
+      return <TouchableOpacity onPress={() => this.props.navigation.navigate("PersonalMessage", { name: message.name, response: message.response })}>
         <Card>
-          <View style={{ margin: 10, borderRadius: 15, backgroundColor:"green"}}>
-            <View style={styles.container} key={message}>
+          <View style={{ margin: 10, borderRadius: 15 }}>
+            <View style={styles.container} key={index}>
               <Text style={{ marginLeft: 5 }}>{message.name}</Text>
               <Text> ></Text>
             </View>
